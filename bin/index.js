@@ -1,6 +1,6 @@
-
+#!/usr/bin/env node
 import prompts from 'prompts';
-import { generateProject } from './generator.js';
+import { generateProject } from '../src/generator.js';
 
 export async function runCLI() {
   const response = await prompts([
@@ -17,8 +17,13 @@ export async function runCLI() {
       type: 'text',
       name: 'projectName',
       message: 'Enter project folder name'
-    }
-  ]);
+    }  ]);
 
   await generateProject(response);
 }
+
+// Call the CLI function
+runCLI().catch(err => {
+  console.error('Error:', err);
+  process.exit(1);
+});
