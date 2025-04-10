@@ -1,0 +1,15 @@
+{
+    "name": "create-api-app",
+    "version": "0.1.0",
+    "type": "module",
+    "bin": {
+      "create-api-app": "./bin/index.js"
+    },
+    "scripts": {
+      "dev": "node ./bin/index.js"
+    },
+    "dependencies": {
+      "fs-extra": "^11.1.1",
+      "prompts": "^2.4.2"
+    }
+  }
